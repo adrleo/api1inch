@@ -96,7 +96,6 @@ app.get("/api/tokens/:chainId", async (req, res) => {
     );
     res.json(data.tokens);
   } catch (err) {
-    console.log({ data });
     console.error(err.response?.data || err.message);
     res.status(500).json({ error: err.response?.data || err.message });
   }
